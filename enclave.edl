@@ -1,0 +1,19 @@
+enclave {
+	include "sgx_eid.h"
+	include "sgx_dh.h"
+	include "sgx_tseal.h"
+
+	trusted {
+		public void ecall_enclave_init([out] uint64_t *unique_id);
+		public void ecall_session_request(uint64_t uid, [out] sgx_dh_msg1_t *dh_msg1, [out] sgx_status_t *ret);
+		public void ecall_exchange_report(uint64_t uid, [in] sgx_dh_msg2_t *dh_msg2, [out] sgx_dh_msg3_t *dh_msg3, [out] sgx_status_t *ret);
+		public void ecall_init_session([out] sgx_dh_session_t *session, [out] sgx_status_t *ret);
+		public void ecall_initiator_proc_msg1(uint64_t uid, [in] const sgx_dh_msg1_t *msg1, [out] sgx_dh_msg2_t *msg2, [in,out] sgx_dh_session_t *dh_session, [out] sgx_status_t *ret);
+		public void ecall_initiator_proc_msg3(uint64_t uid, [in] const sgx_dh_msg3_t *msg3, [in] sgx_dh_session_t *dh_session, [out] sgx_status_t *ret);
+		public void ecall_close_session(uint64_t uid);
+		public void ecall_encrypt(uint64_t uid, [user_check] uint8_t* message, size_t message_size, [user_check] sgx_aes_gcm_data_t* response, size_t response_size, [out] sgx_status_t *ret);
+		public void ecall_decrypt(uint64_t uid, [user_check] sgx_aes_gcm_data_t* message, size_t message_size, [user_check] uint8_t* response, size_t response_size, [out] sgx_status_t *ret);
+		public void ecall_teste([out] uint64_t *unique_id);
+	};
+};
+
