@@ -46,10 +46,10 @@ And, for the client:
 Where `<trusted>` is `0` or `1`. The `<messages>` is the amount of messages you are going to send. The `<repeats>` is the number of tests that will run, and `<datatype>` is the type of data to be sent: `1 = 1 byte`; `2 = 2 bytes`; `3 = 4 bytes`; `4 = 8 bytes`; `5 = string;` and `6 = array`.
 
 ## Contribution guidelines ##
-* newtoncw (Newton Carlos) (owner)
-* h31nr1ch (Tiago Heinrich) (contributor)
-* abviescinski (Amanda B. Viescinski) (contributor)
-* maziero (Carlos Maziero) (contributor)
+* [newtoncw](https://github.com/newtoncw) (Newton Carlos) (owner)
+* [h31nr1ch](https://github.com/h31nr1ch) (Tiago Heinrich) (contributor)
+* [abviescinski](https://github.com/abviescinski) (Amanda B. Viescinski) (contributor)
+* [cmaziero](https://github.com/cmaziero) (Carlos Maziero) (contributor)
 
 ## License ##
 
