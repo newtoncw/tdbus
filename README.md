@@ -16,19 +16,19 @@ Source code of the prototype presented in the paper [A Trusted Message Bus Built
 A wide range of applications use Inter-Process Communication (IPC) mechanisms to communicate between each other or between their components running in different processes. A well-known IPC mechanism in UNIX-like systems is D-Bus, which allows processes to communicate by receiving and routing messages. Despite being widely used, such system lacks mechanisms to provide end-to-end data confidentiality. In this paper we propose the use of Intel Software Guard Extensions (SGX) to provide a trusted communication channel between local applications over the D-Bus message bus system. We obtained stronger security guarantees in message confidentiality and integrity while keeping a small Trusted Computing Base (TCB) and compatibility with the reference D-Bus system.
 
 ```
-@INPROCEEDINGS{207522,
-    AUTHOR="Newton Will and Tiago Heinrich and Amanda Viescinski and Carlos Maziero",
-    TITLE="A Trusted Message Bus Built on Top of D-Bus",
-    BOOKTITLE="SBSeg 2020",
-    DAYS="13-16",
-    MONTH="oct",
-    YEAR="2020"
+@INPROCEEDINGS{Will2020tdbus,
+    author = {Newton Carlos Will and Tiago Heinrich and Amanda Benites Viescinski and Carlos Alberto Maziero},
+    title = {A Trusted Message Bus Built on Top of D-Bus},
+    booktitle = {Proceedings of the 20th Brazilian Symposium on Information and Computational Systems Security},
+    year = {2020},
+    address = {Petrópolis, RJ, Brazil},
+    publisher = {SBC}
 }
 ```
 
 ## Install ##
 
-The system require D-Bus Daemon 1.12.2 and [SGX](https://github.com/intel/linux-sgx) SDK 2.9.101.2.
+The system require D-Bus Daemon 1.12.2 and [SGX SDK 2.9.101.2](https://github.com/intel/linux-sgx).
 
 ## Setup ##
 
@@ -53,4 +53,4 @@ Where `<trusted>` is `0` or `1`. The `<messages>` is the amount of messages you 
 
 ## License ##
 
-Licenced under the GPL-3.0 License. If you make any use of this code for academic purpose, you must cite the papers.
+Licenced under the GPL-3.0 License. If you make any use of this code for academic purpose, you must cite the paper.
